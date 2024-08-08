@@ -1,5 +1,74 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+ body {
+    font-family: 'Jost', sans-serif;
+    min-height: 100vh;
     margin: 0;
-    min-width: 100vh;
-    background-color: #f0f0f0;
+    overflow: hidden;
+ }
+
+main {
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 70%);
+    width: 100vw;
+    
+
+}
+
+.header h1 {
+    font-size: 100px;
+    font-weight: 500;
+    font-style: italic;
+    color: #ac2a2a;
+    text-align: center;
+    animation: focus-in-contract 3s linear;
+}
+
+
+@keyframes focus-in-contract {
+    0% {
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        letter-spacing: normal;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.social-media-icons {
+    font-size: 70px;
+    position: relative;
+    top: -60px;
+    text-align: center;
+}
+
+.social-media-icons i {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: focus-in-contract 3s linear;
+
+}
+
+.social-media-icons i:hover {
+    color: #ac2a2a;
+    transform: scale(1.2);
+}
+footer {
+    position: absolute;
+    top: calc(100vh - 50px);
+    width: 100%;
+    text-align: center;
+    
 }
